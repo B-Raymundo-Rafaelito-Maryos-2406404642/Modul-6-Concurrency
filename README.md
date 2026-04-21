@@ -13,3 +13,6 @@ In the third commit, I added error handling to the TCP server. The server now ch
 
 ### Commit 3 Screen Capture
 ![Commit 3 screen capture](/assets/images/commit3.png)
+
+### Commit 4 Reflection Notes
+In the fourth commit, I added functionality to the TCP server to handle multiple incoming connections concurrently. The server now uses the `thread::sleep` function to introduce a delay between processing each connection to simulate a slow server. The `handle_connection` function is now called within a new thread for each connection, allowing the server to continue listening for new connections while processing existing ones. This enhancement makes the server more scalable and capable of handling a higher volume of traffic.
