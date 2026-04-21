@@ -7,3 +7,9 @@ In the second commit, I added functionality to the TCP server to respond to inco
 
 ### Commit 2 Screen Capture
 ![Commit 2 screen capture](/assets/images/commit2.png)
+
+### Commit 3 Reflection Notes
+In the third commit, I added error handling to the TCP server. The server now checks if the "hello.html" file exists before trying to read it. If the file does not exist, the server returns a `404 Not Found` response instead of crashing. This is done by using the `std::fs::metadata` function to check if the file exists before attempting to read it. If the file does not exist, the server constructs a `404 Not Found` response and sends it back to the client. This improvement makes the server more robust and user-friendly, as it can now handle cases where the requested resource is not available without crashing or returning an unhelpful error message.
+
+### Commit 3 Screen Capture
+![Commit 3 screen capture](/assets/images/commit3.png)
