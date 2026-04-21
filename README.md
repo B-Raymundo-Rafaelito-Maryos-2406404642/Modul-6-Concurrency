@@ -1,3 +1,9 @@
 # Reflection 
 ### Commit 1 Reflection Notes
 From the rust code above, I learned how to create a simple TCP server in Rust. The code listens for incoming connections on port 7878 and prints the HTTP request to the console. I also learned how to use the `TcpListener` and `TcpStream` types to handle incoming connections and read data from the stream. Additionally, I learned how to use the `BufReader` type to read data from the stream in a buffered manner. The `handle_connection` function takes a `TcpStream` as an argument, creates a `BufReader` from it, and reads the lines of the HTTP request until it encounters an empty line. The HTTP request is then printed to the console in a pretty format using `println!`. Overall, this code provides a basic example of how to create a TCP server in Rust and handle incoming connections.
+
+### Commit 2 Reflection Notes
+In the second commit, I added functionality to the TCP server to respond to incoming HTTP requests. The server now returns a simple HTTP response with a status line, headers, and a body. The server returns `200 OK` and reads the contents of a file named "hello.html" and sends it back to the client as a response to the HTTP request. This allows the server to serve a simple HTML page to the client. The `handle_connection` function was modified to read the contents of "hello.html" using the `std::fs::read_to_string` function and then write the HTTP response back to the client using the `write_all` method of the `TcpStream`. The response includes the HTTP status line, headers, and the contents of the HTML file. This enhancement allows the server to provide a more complete response to incoming HTTP requests, making it more functional as a basic web server.
+
+### Commit 2 Screen Capture
+![Commit 2 screen capture](/assets/images/commit2.png)
